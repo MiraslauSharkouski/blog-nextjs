@@ -1,6 +1,8 @@
 import { BlogpostCard } from "@/components/general/BlogpostCard";
 import { prisma } from "./utils/db";
 
+export const revalidata = 60;
+
 async function getData() {
   const data = await prisma.blogPost.findMany({
     select: {
